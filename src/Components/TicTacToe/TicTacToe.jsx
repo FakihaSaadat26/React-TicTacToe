@@ -83,6 +83,31 @@ const TicTacToe = () => {
     return null;
   };
 
+  const checkWin = () =>{
+    if (data[0] ===data[1]===data[2] && data[2]!=="")
+    {
+      won(data);
+    }
+    else if (data[3] ===data[4]===data[5] && data[5]!=="")
+    {
+      won(data);
+    }
+    else if (data[6] ===data[7]===data[8] && data[8]!=="")
+      {
+        won(data);
+      }
+    else if (data[0] ===data[3]===data[6] && data[6]!=="")
+      {
+        won(data);
+      }
+    else if (data[1] ===data[4]===data[7] && data[7]!=="")
+      {
+        won(data);
+      }
+  }
+const won = (winner) => {
+  setLock(true);
+}
   return (
     <div className="container">
       <h1 className="title">
